@@ -21,4 +21,5 @@ public class CourseController {
     public List<Course> findCoursesByStarRating(@RequestParam int starRating){
         return courseRepository.findCoursesByStarRating(starRating);
     }
+
 }
