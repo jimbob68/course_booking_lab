@@ -32,7 +32,7 @@ public class Course {
     @OneToMany(mappedBy = "course")
     private List<Booking> bookings;
 
-    public Course(String name, String town, int starRating) {
+    public Course(String name, String town, int starRating, Customer customer) {
         this.name = name;
         this.town = town;
         this.starRating = starRating;
@@ -42,14 +42,6 @@ public class Course {
 
     public Course() {
     }
-
-//    public Customer getCustomer() {
-//        return customer;
-//    }
-//
-//    public void setCustomer(Customer customer) {
-//        this.customer = customer;
-//    }
 
     public List<Booking> getBookings() {
         return bookings;

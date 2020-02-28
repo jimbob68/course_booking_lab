@@ -1,4 +1,4 @@
-package com.codeclan.example.CourseBookingSystem.repository;
+package com.codeclan.example.CourseBookingSystem.repository.CourseRepository;
 
 import com.codeclan.example.CourseBookingSystem.models.Course;
 import org.springframework.data.jpa.repository.JpaRepository;

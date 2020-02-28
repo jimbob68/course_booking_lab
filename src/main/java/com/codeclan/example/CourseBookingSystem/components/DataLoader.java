@@ -3,9 +3,9 @@ package com.codeclan.example.CourseBookingSystem.components;
 import com.codeclan.example.CourseBookingSystem.models.Booking;
 import com.codeclan.example.CourseBookingSystem.models.Course;
 import com.codeclan.example.CourseBookingSystem.models.Customer;
-import com.codeclan.example.CourseBookingSystem.repository.BookingRepository;
-import com.codeclan.example.CourseBookingSystem.repository.CourseRepository;
-import com.codeclan.example.CourseBookingSystem.repository.CustomerRepository;
+import com.codeclan.example.CourseBookingSystem.repository.BookingRepository.BookingRepository;
+import com.codeclan.example.CourseBookingSystem.repository.CourseRepository.CourseRepository;
+import com.codeclan.example.CourseBookingSystem.repository.CustomerRepository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -33,10 +33,10 @@ public class DataLoader implements ApplicationRunner {
         Customer customer2 = new Customer("Cody", "Linlithgow", 40);
         customerRepository.save(customer2);
 
-        Course course1 = new Course("Professional Software Development", "Edinburgh", 5);
+        Course course1 = new Course("Professional Software Development", "Edinburgh", 5, customer1);
         courseRepository.save(course1);
 
-        Course course2 = new Course("Advanced Ballet", "Dunfermline", 5);
+        Course course2 = new Course("Advanced Ballet", "Dunfermline", 5, customer2);
         courseRepository.save(course2);
 
         Booking booking1 = new Booking("22-07-20", customer1, course2);

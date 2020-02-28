@@ -1,7 +1,7 @@
 package com.codeclan.example.CourseBookingSystem.controllers;
 
 
-import com.codeclan.example.CourseBookingSystem.repository.BookingRepository;
+import com.codeclan.example.CourseBookingSystem.repository.BookingRepository.BookingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
